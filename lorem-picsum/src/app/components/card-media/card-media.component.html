@@ -15,6 +15,7 @@
 			style="max-width: 400px"
 			[nzCover]="coverTemplate"
 			class="card"
+			[nzLoading]="loading"
 		>
 			<div class="card-content">
 				<nz-card-meta
@@ -32,11 +33,17 @@
 			</div>
 		</nz-card>
 		<ng-template #coverTemplate>
-			<img
-				class="image-responsive"
-				alt="example"
-				src="{{ photo.download_url }}"
-			/>
+			<nz-skeleton
+				[nzLoading]="loading"
+				[nzActive]="true"
+				[ngClass]="loading ? 'skeleton' : ''"
+			>
+				<img
+					class="image-responsive"
+					alt="example"
+					src="{{ photo.download_url }}"
+				/>
+			</nz-skeleton>
 		</ng-template>
 	</div>
 </div>

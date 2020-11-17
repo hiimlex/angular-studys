@@ -20,11 +20,15 @@ export class Picture {
 export class CardMediaComponent implements OnInit {
 	photos: Picture[] = [];
 	page = 11;
+	loading = true;
 
 	constructor(private HttpClient: HttpClient) {}
 
 	ngOnInit(): void {
 		this.getPics();
+		setTimeout(() => {
+			this.loading = false;
+		}, 2000);
 	}
 
 	getPics() {
@@ -33,13 +37,16 @@ export class CardMediaComponent implements OnInit {
 				this.page +
 				'&limit=30'
 		).subscribe((response) => {
-			console.log(response);
 			this.photos = response;
 		});
 	}
 
 	handleRandom() {
+		this.loading = true;
 		this.page = Math.floor(Math.random() * 11);
 		this.getPics();
+		setTimeout(() => {
+			this.loading = false;
+		}, 1500);
 	}
 }

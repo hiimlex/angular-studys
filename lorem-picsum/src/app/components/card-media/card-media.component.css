@@ -60,3 +60,8 @@ button:hover {
 	justify-content: space-between;
 	align-items: center;
 }
+
+.skeleton {
+	width: 400px;
+	margin-left: 1.3vw;
+}
