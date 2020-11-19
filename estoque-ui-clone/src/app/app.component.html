@@ -1,0 +1,358 @@
+<nz-layout class="app-layout">
+	<nz-sider
+		class="menu-sidebar"
+		nzWidth="200px"
+		nzBreakpoint="md"
+		[nzCollapsed]="!isCollapsed"
+		[nzTrigger]="null"
+	>
+		<div class="sidebar-logo">
+			<a routerLink="/estoque/home">
+				<img
+					src="https://revanh-estoque.brisanet.net.br/assets/brisa-icon.png"
+					class="logo"
+					alt="logo"
+					[class.collapse]="!isCollapsed"
+			/></a>
+		</div>
+		<ul
+			nz-menu
+			nzTheme="dark"
+			nzMode="inline"
+			nzInlineCollapsed="true"
+			style=""
+		>
+			<li nz-submenu nzTitle="Transações" nzIcon="swap">
+				<ul>
+					<li nz-menu-item>
+						<a>Transação</a>
+					</li>
+					<li nz-menu-item>
+						<a>Transação Cliente</a>
+					</li>
+					<li nz-menu-item>
+						<a>Transação Gerência</a>
+					</li>
+					<li nz-menu-item>
+						<a>Transação Infraest...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Transação Gerência</a>
+					</li>
+					<li nz-menu-item>
+						<a>Transação Gerência</a>
+					</li>
+					<li nz-menu-item>
+						<a>Minhas Transações</a>
+					</li>
+					<li nz-menu-item>
+						<a>Devoluções</a>
+					</li>
+					<li nz-menu-item>
+						<a>Temporárias</a>
+					</li>
+					<li nz-submenu nzTitle="Cabeamento">
+						<ul>
+							<li nz-menu-item>
+								<a>Nova Transação</a>
+							</li>
+							<li nz-menu-item><a>Devolução</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li nz-submenu nzTitle="Itens" nzIcon="qrcode">
+				<ul>
+					<li nz-menu-item>
+						<a>Item</a>
+					</li>
+					<li nz-menu-item>
+						<a>Itens de instalação</a>
+					</li>
+					<li nz-menu-item>
+						<a>Itens de cabeame...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Alterar Itens</a>
+					</li>
+					<li nz-menu-item>
+						<a>Agrupar Itens</a>
+					</li>
+				</ul>
+			</li>
+			<li nz-submenu nzTitle="Auditorias" nzIcon="issues-close">
+				<ul>
+					<li nz-menu-item>
+						<a>Ressalvas</a>
+					</li>
+					<li nz-menu-item>
+						<a>Estados para Audi...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Auditoria de Bobi...</a>
+					</li>
+				</ul>
+			</li>
+			<li nz-submenu nzTitle="Localidades" nzIcon="environment">
+				<ul>
+					<li nz-menu-item>
+						<a>Contrato</a>
+					</li>
+					<li nz-menu-item>
+						<a>Localidade</a>
+					</li>
+					<li nz-menu-item>
+						<a>Funcionário</a>
+					</li>
+					<li nz-menu-item>
+						<a>Cidade</a>
+					</li>
+					<li nz-menu-item>
+						<a>Infraestrutura</a>
+					</li>
+					<li nz-menu-item>
+						<a>Gestores</a>
+					</li>
+				</ul>
+			</li>
+			<li nz-submenu nzTitle="Categorias" nzIcon="tags">
+				<ul>
+					<li nz-menu-item>
+						<a>Empesa</a>
+					</li>
+					<li nz-menu-item>
+						<a>Fornecedor</a>
+					</li>
+					<li nz-menu-item>
+						<a>Categoria</a>
+					</li>
+					<li nz-menu-item>
+						<a>Subcategoria</a>
+					</li>
+					<li nz-menu-item>
+						<a>Fabricante</a>
+					</li>
+					<li nz-menu-item>
+						<a>Modelo de Fabrica...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Atributo Personali...</a>
+					</li>
+				</ul>
+			</li>
+			<li nz-submenu nzTitle="Notas Fiscais" nzIcon="profile">
+				<ul>
+					<li nz-menu-item>
+						<a>Nota Fiscal</a>
+					</li>
+				</ul>
+			</li>
+			<li nz-submenu nzTitle="Relatórios" nzIcon="area-chart">
+				<ul>
+					<li nz-menu-item>
+						<a>Relatório de bobina</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de cabo ...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de equip...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de movi...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de itens ...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de entra...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de instal...</a>
+					</li>
+					<li nz-menu-item>
+						<a>Relatório de agrup...</a>
+					</li>
+					<li nz-nz-submenu nzTitle="Relatório de ina">
+						<ul>
+							<li nz-menu-item>
+								<a>Funcionários</a>
+							</li>
+							<li nz-menu-item>
+								<a>Regional</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nz-sider>
+	<nz-layout>
+		<nz-header>
+			<div class="app-header">
+				<div>
+					<span
+						class="header-trigger"
+						(click)="handleCollapse()"
+					>
+						<i
+							class="trigger"
+							nz-icon
+							[nzType]="
+								!isCollapsed
+									? 'menu-unfold'
+									: 'menu-fold'
+							"
+						></i>
+					</span>
+					<span
+						nz-tooltip
+						nzTooltipTitle="Sua localidade atual"
+						style="cursor: pointer"
+						nzTooltipPlacement="bottom"
+					>
+						<i
+							class="location"
+							nz-icon
+							nzType="environment"
+							nzTheme="outline"
+						>
+						</i>
+						<span
+							style="
+								font-size: 16px;
+								color: #595959;
+							"
+						>
+							078.218.760-97 Usuário Teste</span
+						>
+					</span>
+				</div>
+				<div class="profile-content">
+					<span
+						nz-tooltip
+						nzTooltipTitle="Itens do seu Estoque"
+						nzTooltipPlacement="bottom"
+						style="margin-right: 0.8vw"
+					>
+						<a href="#" class="link-header">
+							<i
+								class="location"
+								nz-icon
+								nzType="qrcode"
+								nzTheme="outline"
+							>
+							</i>
+							<span
+								style="
+									font-size: 16px;
+									color: #595959;
+								"
+							>
+								Meus Itens</span
+							>
+						</a>
+					</span>
+					<span
+						><nz-divider
+							nzType="vertical"
+							class="divider"
+						></nz-divider>
+					</span>
+					<span
+						nz-tooltip
+						nzTooltipTitle="Itens do seu Estoque"
+						nzTooltipPlacement="bottom"
+						style="
+							margin-left: 0.8vw;
+							margin-right: 0.8vw;
+						"
+					>
+						<a href="#" class="link-header">
+							<i
+								class="location"
+								nz-icon
+								nzType="swap"
+								nzTheme="outline"
+							>
+							</i>
+							<span
+								style="
+									font-size: 16px;
+									color: #595959;
+								"
+							>
+								Minhas Transações</span
+							>
+						</a>
+					</span>
+					<span>
+						<nz-divider
+							nzType="vertical"
+							style="
+								height: 3.5vh;
+								background-color: #afafaf;
+								width: 2px;
+							"
+						></nz-divider>
+					</span>
+					<span style="margin-left: 0.8vw">
+						<nz-avatar
+							[nzSize]="32"
+							nzIcon="user"
+							style="font-size: 18px"
+						></nz-avatar>
+						<a
+							style="
+								font-size: 14px;
+								color: #4a8cfe;
+							"
+							nz-dropdown
+							[nzDropdownMenu]="menu"
+						>
+							Usuário</a
+						>
+						<nz-dropdown-menu #menu="nzDropdownMenu">
+							<ul
+								nz-menu
+								nzSelectable
+								style="border-radius: 4px"
+							>
+								<li
+									nz-menu-item
+									class="menu-drop-down"
+								>
+									Perfil
+								</li>
+								<li
+									nz-menu-item
+									class="menu-drop-down"
+								>
+									Ir para Demandas
+								</li>
+								<li
+									nz-menu-item
+									class="menu-drop-down"
+								>
+									Sair
+								</li>
+							</ul>
+						</nz-dropdown-menu>
+					</span>
+				</div>
+			</div>
+		</nz-header>
+		<nz-content>
+			<div>
+				<nz-breadcrumb>
+					<nz-breadcrumb-item>
+						<a href="#" class="breadcrumbs">Estoque</a>
+					</nz-breadcrumb-item>
+				</nz-breadcrumb>
+			</div>
+			<div class="inner-content">
+				<router-outlet></router-outlet>
+			</div>
+		</nz-content>
+	</nz-layout>
+</nz-layout>
