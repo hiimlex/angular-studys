@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconsProviderModule } from './icons-provider.module';
 
-import { registerLocaleData } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import pt from '@angular/common/locales/pt';
 
 import { FormsModule } from '@angular/forms';
@@ -14,14 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { pt_BR } from 'ng-zorro-antd/i18n';
 
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { NzSpaceModule } from 'ng-zorro-antd/space';
-import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzAvatarModule } from 'ng-zorro-antd/avatar';
-import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
-import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { SharedModule } from './modules/shared/shared.module';
+import { MenuListModule } from './pages/menu-list/menu-list.module';
 
 registerLocaleData(pt);
 
@@ -31,19 +26,15 @@ registerLocaleData(pt);
 		BrowserModule,
 		AppRoutingModule,
 		IconsProviderModule,
-		NzLayoutModule,
-		NzMenuModule,
 		FormsModule,
 		HttpClientModule,
 		BrowserAnimationsModule,
-		NzSpaceModule,
-		NzToolTipModule,
-		NzDividerModule,
-		NzAvatarModule,
-		NzDropDownModule,
-		NzBreadCrumbModule,
+		RouterModule,
+		SharedModule,
+		MenuListModule,
 	],
 	providers: [{ provide: NZ_I18N, useValue: pt_BR }],
 	bootstrap: [AppComponent],
+	exports: [CommonModule],
 })
 export class AppModule {}

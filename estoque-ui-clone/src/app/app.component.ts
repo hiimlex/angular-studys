@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-root',
@@ -8,9 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 	isCollapsed = true;
 
-	constructor() {
-		console.log(this.isCollapsed);
-	}
+	constructor(private route: Router) {}
 
 	handleCollapse() {
 		console.log(this.isCollapsed);

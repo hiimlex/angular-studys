@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { MenuListRoutingModule } from './menu-list-routing.module';
 
 import { MenuListComponent } from './menu-list.component';
-import { NzTypographyModule } from 'ng-zorro-antd/typography';
+
+import { SharedModule } from '../../modules/shared/shared.module';
 
 @NgModule({
-	imports: [MenuListRoutingModule, NzTypographyModule],
+	imports: [CommonModule, MenuListRoutingModule, SharedModule],
 	declarations: [MenuListComponent],
 	exports: [MenuListComponent],
 })
