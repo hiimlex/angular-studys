@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TrasacoesComponent } from './pages/trasacoes/trasacoes.component';
+import { TransacoesComponent } from './pages/transacoes/transacoes.component';
 
 const routes: Routes = [
 	{ path: '', pathMatch: 'full', redirectTo: '/estoque/home' },
@@ -12,7 +12,7 @@ const routes: Routes = [
 				(m) => m.MenuListModule
 			),
 	},
-	{ path: 'estoque/transacoes', component: TrasacoesComponent },
+	{ path: 'estoque/transacoes', component: TransacoesComponent },
 ];
 
 @NgModule({

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TrasacoesComponent } from './trasacoes.component';
+import { TransacoesComponent } from './transacoes.component';
 
 import { SharedModule } from '../../modules/shared/shared.module';
 
 @NgModule({
 	imports: [CommonModule, SharedModule],
-	declarations: [TrasacoesComponent],
-	exports: [TrasacoesComponent],
+	declarations: [TransacoesComponent],
+	exports: [TransacoesComponent],
 })
 export class TransacoesModule {}
