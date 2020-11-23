@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { TransacoesComponent } from './transacoes.component';
 
 import { SharedModule } from '../../modules/shared/shared.module';
+import { CardModule } from '../../components';
 
 @NgModule({
-	imports: [CommonModule, SharedModule],
+	imports: [CommonModule, SharedModule, CardModule],
 	declarations: [TransacoesComponent],
 	exports: [TransacoesComponent],
 })

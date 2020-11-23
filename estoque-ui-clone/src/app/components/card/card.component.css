@@ -1,0 +1,21 @@
+::ng-deep .ant-card-actions {
+	background-color: #fafafa;
+}
+
+.card-info {
+	display: flex;
+	align-items: center;
+	margin: 1vh -0.2vw;
+}
+
+.card-text {
+	margin-left: 1.2vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.block {
+	display: none;
+}

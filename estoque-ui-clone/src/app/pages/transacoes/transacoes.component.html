@@ -10,3 +10,15 @@
 >
 	Transações
 </h2>
+<div style="margin: 0 0.5vw">
+	<div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+		<div
+			nz-col
+			[nzSpan]="6"
+			style="margin-bottom: 2vh"
+			*ngFor="let card of cards"
+		>
+			<app-card [card]="card" positionTooltip="top"></app-card>
+		</div>
+	</div>
+</div>

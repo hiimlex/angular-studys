@@ -17,6 +17,8 @@ import { pt_BR } from 'ng-zorro-antd/i18n';
 
 import { SharedModule } from './modules/shared/shared.module';
 import { MenuListModule } from './pages/menu-list/menu-list.module';
+import { TransacoesModule } from './pages/transacoes/transacoes.module';
+import { CardModule } from './components/card/card.module';
 
 registerLocaleData(pt);
 
@@ -32,6 +34,8 @@ registerLocaleData(pt);
 		RouterModule,
 		SharedModule,
 		MenuListModule,
+		CardModule,
+		TransacoesModule,
 	],
 	providers: [{ provide: NZ_I18N, useValue: pt_BR }],
 	bootstrap: [AppComponent],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cards } from './mock-transações';
 
 @Component({
 	selector: 'app-transacoes',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./transacoes.component.css'],
 })
 export class TransacoesComponent implements OnInit {
+	cards = Cards;
+
 	constructor() {}
 
 	ngOnInit() {}

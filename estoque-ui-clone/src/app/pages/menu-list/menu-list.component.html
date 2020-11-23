@@ -16,49 +16,10 @@
 		<div
 			nz-col
 			[nzSpan]="6"
-			*ngFor="let c of cards"
+			*ngFor="let card of cards"
 			style="margin-bottom: 2vh"
 		>
-			<nz-card
-				[nzActions]="[actionButtonGo]"
-				style="border-color: #ececec"
-			>
-				<div class="card-info">
-					<i
-						nz-icon
-						nzType="{{ c.icon }}"
-						nzTheme="outline"
-						style="color: #4a8cfe; font-size: 50px"
-					></i>
-					<div class="card-text">
-						<span
-							style="
-								font-size: 16px;
-								color: #000;
-								margin-bottom: 1.5vh;
-							"
-							>{{ c.title }}
-						</span>
-						<span style="color: #595959">{{
-							c.subTitle
-						}}</span>
-					</div>
-				</div>
-			</nz-card>
-			<ng-template #actionButtonGo>
-				<a
-					routerLink="/estoque/transacoes"
-					nzTooltipTitle="{{ c.subTitle }}"
-					nzTooltipPlacement="bottom"
-					nz-tooltip
-					><i
-						nz-icon
-						nzType="{{ c.iconButton }}"
-						nzTheme="outline"
-						style="color: #4a8cfe"
-					></i
-				></a>
-			</ng-template>
+			<app-card [card]="card" positionTooltip="bottom"></app-card>
 		</div>
 	</div>
 </div>

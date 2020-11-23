@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TransacoesComponent } from './pages/transacoes/transacoes.component';
+import { TransacoesComponent } from './pages/transacoes';
 
 const routes: Routes = [
 	{ path: '', pathMatch: 'full', redirectTo: '/estoque/home' },

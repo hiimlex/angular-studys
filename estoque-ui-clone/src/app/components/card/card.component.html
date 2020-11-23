@@ -1,0 +1,54 @@
+<nz-card
+	[nzActions]="
+		card.doubleAction ? [actionButtonGo, actionExtra] : [actionButtonGo]
+	"
+	style="border-color: #ececec"
+>
+	<div class="card-info">
+		<i
+			nz-icon
+			nzType="{{ card.icon }}"
+			nzTheme="outline"
+			style="color: #4a8cfe; font-size: 50px"
+		></i>
+		<div class="card-text">
+			<span
+				style="
+					font-size: 16px;
+					color: #000;
+					margin-bottom: 1.5vh;
+				"
+				>{{ card.title }}
+			</span>
+			<span style="color: #595959">{{ card.subTitle }}</span>
+		</div>
+	</div>
+</nz-card>
+<ng-template #actionButtonGo>
+	<a
+		routerLink="{{ card.route }}"
+		nzTooltipTitle="{{ card.tooltipText }}"
+		nzTooltipPlacement="{{ positionTooltip }}"
+		nz-tooltip
+		><i
+			nz-icon
+			nzType="{{ card.iconButton }}"
+			nzTheme="outline"
+			style="color: #4a8cfe"
+		></i
+	></a>
+</ng-template>
+<ng-template #actionExtra>
+	<a
+		routerLink="{{ card.routeExtra }}"
+		nzTooltipTitle="{{ card.extraTooltipText }}"
+		nzTooltipPlacement="{{ positionTooltip }}"
+		nz-tooltip
+		><i
+			nz-icon
+			nzType="{{ card.actionIconButton }}"
+			nzTheme="outline"
+			style="color: #4a8cfe"
+		></i
+	></a>
+</ng-template>
